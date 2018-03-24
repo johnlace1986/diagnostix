@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace diagnsotix.API.Controllers
+namespace diagnostix.API.Controllers
 {
     [Route("api/[controller]")]
     [Authorize]

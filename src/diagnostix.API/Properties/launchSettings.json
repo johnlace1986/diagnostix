@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "diagnsotix.API": {
+    "diagnostix.API": {
       "commandName": "Project",
       "launchUrl": "api/values",
       "environmentVariables": {
