@@ -13,12 +13,15 @@ namespace diagnostix.API
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
 
         public IConfiguration Configuration { get; }
+        public IHostingEnvironment HostingEnvironment { get; }
+
+        public Startup(IConfiguration configuration, IHostingEnvironment hostingEnvironment)
+        {
+            Configuration = configuration;
+            HostingEnvironment = hostingEnvironment;
+        }
 
         public void ConfigureServices(IServiceCollection services)
         {
@@ -29,10 +32,10 @@ namespace diagnostix.API
             services.AddAuthentication("Bearer")
                 .AddIdentityServerAuthentication(options =>
                 {
-                    options.Authority = "http://localhost:5000";
+                    options.Authority = Configuration["SSO:baseUrl"];
                     options.RequireHttpsMetadata = false;
 
-                    options.ApiName = "diagnostix.API";
+                    options.ApiName = Configuration["SSO:apiName"];
                 });
         }
 
