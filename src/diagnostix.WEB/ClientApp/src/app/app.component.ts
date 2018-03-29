@@ -1,6 +1,7 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { fail } from 'assert';
+import { NavMenuComponent } from '../app/nav-menu/nav-menu.component';
 
 @Component({
   selector: 'app-root',
@@ -27,24 +28,29 @@ export class AppComponent {
 
   menuState: string = 'out';
 
+  @ViewChild('navMainMenu') navMenu: NavMenuComponent;
+
   toggleMenu() {
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
+    this.navMenu.removePin();
   }
 
   onClick(event) {
 
-    var currentElement = event.srcElement;
+    if (!this.navMenu.isPinned) {
+      var currentElement = event.srcElement;
 
-    while (currentElement !== null) {
-      switch (currentElement.id) {
-        case 'nav-menu':
-        case 'btnToggleMenu':
-          return;
-      }
+      while (currentElement !== null) {
+        switch (currentElement.id) {
+          case 'navMainMenu':
+          case 'btnToggleMenu':
+            return;
+        }
 
-      currentElement = currentElement.parentNode;
-    };
+        currentElement = currentElement.parentNode;
+      };
 
-    this.menuState = 'out';
+      this.menuState = 'out';
+    }
   }
 }

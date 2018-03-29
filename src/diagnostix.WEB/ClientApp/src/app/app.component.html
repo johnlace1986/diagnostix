@@ -1,7 +1,7 @@
 <div class='container-fluid' style=" font-family: 'Roboto Condensed', sans-serif;">
   <div class='row'>
     <div class='col-sm-3'>
-      <app-nav-menu id="nav-menu" [@slideInOut]="menuState"></app-nav-menu>
+      <app-nav-menu #navMainMenu id="navMainMenu" [@slideInOut]="menuState"></app-nav-menu>
     </div>
     <div class='col-sm-9 body-content'>
       <button id="btnToggleMenu" (click)="toggleMenu()" class="hamburger" style="float: right;">

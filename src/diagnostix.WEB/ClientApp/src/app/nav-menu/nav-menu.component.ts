@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-nav-menu',
@@ -6,13 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-menu.component.css']
 })
 export class NavMenuComponent {
-  isExpanded = false;
 
-  collapse() {
-    this.isExpanded = false;
+  isPinned: boolean = false;
+
+  togglePin() {
+    this.isPinned = !this.isPinned;
   }
 
-  toggle() {
-    this.isExpanded = !this.isExpanded;
+  removePin() {
+    this.isPinned = false;
   }
 }
