@@ -1,9 +1,9 @@
 <div class='container-fluid' style=" font-family: 'Roboto Condensed', sans-serif;">
   <div class='row'>
-    <div class='col-sm-3'>
+    <div>
       <app-nav-menu #navMainMenu id="navMainMenu" [@slideInOut]="menuState"></app-nav-menu>
     </div>
-    <div class='col-sm-9 body-content'>
+    <div class='body-content'>
       <button id="btnToggleMenu" (click)="toggleMenu()" class="hamburger" style="float: right;">
         <span>toggle menu</span>
       </button>
