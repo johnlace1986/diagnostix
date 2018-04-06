@@ -37,6 +37,18 @@
     <None Remove="ClientApp\src\app\fetch-data\fetch-data.component.ts" />
     <None Remove="ClientApp\src\app\home\home.component.ts" />
     <None Remove="ClientApp\src\app\nav-menu\nav-menu.component.ts" />
+    <None Remove="ClientApp\src\auth\auth.module.ts" />
+    <None Remove="ClientApp\src\auth\auth.routing.ts" />
+    <None Remove="ClientApp\src\auth\authactivationguard.ts" />
+    <None Remove="ClientApp\src\auth\authenticatedHttpClient.ts" />
+    <None Remove="ClientApp\src\auth\authSettings.ts" />
+    <None Remove="ClientApp\src\auth\forbidden\forbidden.component.ts" />
+    <None Remove="ClientApp\src\auth\role-if.directive.ts" />
+    <None Remove="ClientApp\src\auth\roles.ts" />
+    <None Remove="ClientApp\src\auth\security.service.ts" />
+    <None Remove="ClientApp\src\auth\unauthorised\unauthorised.component.ts" />
+    <None Remove="ClientApp\src\common\notification.ts" />
+    <None Remove="ClientApp\src\common\notifications.service.ts" />
     <None Remove="ClientApp\src\environments\environment.prod.ts" />
     <None Remove="ClientApp\src\environments\environment.ts" />
     <None Remove="ClientApp\src\main.ts" />
@@ -60,12 +72,28 @@
     <TypeScriptCompile Include="ClientApp\src\app\fetch-data\fetch-data.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\home\home.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\nav-menu\nav-menu.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\auth\auth.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\auth\auth.routing.ts" />
+    <TypeScriptCompile Include="ClientApp\src\auth\authactivationguard.ts" />
+    <TypeScriptCompile Include="ClientApp\src\auth\authenticatedHttpClient.ts" />
+    <TypeScriptCompile Include="ClientApp\src\auth\authSettings.ts" />
+    <TypeScriptCompile Include="ClientApp\src\auth\forbidden\forbidden.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\auth\role-if.directive.ts" />
+    <TypeScriptCompile Include="ClientApp\src\auth\roles.ts" />
+    <TypeScriptCompile Include="ClientApp\src\auth\security.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\auth\unauthorised\unauthorised.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\common\notifications.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\common\notification.ts" />
     <TypeScriptCompile Include="ClientApp\src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="ClientApp\src\environments\environment.ts" />
     <TypeScriptCompile Include="ClientApp\src\main.ts" />
     <TypeScriptCompile Include="ClientApp\src\polyfills.ts" />
     <TypeScriptCompile Include="ClientApp\src\test.ts" />
     <TypeScriptCompile Include="ClientApp\src\typings.d.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\dist\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
