@@ -9,10 +9,10 @@ import { NavMenuComponent } from '../app/nav-menu/nav-menu.component';
   styleUrls: ['./app.component.css'],
   animations: [    
     trigger('slideInOut', [
-      state('in', style({
+      state('out', style({
         transform: 'translate3d(100%, 0, 0)'
       })),
-      state('out', style({
+      state('in', style({
         transform: 'translate3d(0, 0, 0)'
       })),
       transition('in => out', animate('400ms ease-in-out')),

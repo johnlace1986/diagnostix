@@ -3,9 +3,9 @@
   background: #233233;
   color: #ffffff;
   position: fixed;
-  left: -404px;
+  left: auto;
   top: 0;
-  right: auto;
+  right: 0;
   bottom: 0;
   width: 404px;
   z-index: 9999;
