@@ -231,3 +231,10 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+/src/diagnostix.WEB/wwwroot/dist/*.js.map
+/src/diagnostix.WEB/wwwroot/dist/*.js.gz
+/src/diagnostix.WEB/wwwroot/dist/*.css.map
+/src/diagnostix.WEB/wwwroot/dist/*.css.gz
+/src/diagnostix.WEB/wwwroot/dist/main.*.js
+/src/diagnostix.WEB/wwwroot/dist/manifest.*.js
+/src/diagnostix.WEB/wwwroot/dist/vendor.*.js
