@@ -9,6 +9,10 @@ import { SecurityService } from '../security.service';
 export class UnauthorisedComponent {
   constructor(private authService: SecurityService, private location: Location) { }
 
+  ngOnInit() {
+    this.Login();
+  }
+
   public Login() {
     this.authService.startSigninMainWindow();
   }
