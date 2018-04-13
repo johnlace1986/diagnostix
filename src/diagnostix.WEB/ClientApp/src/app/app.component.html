@@ -1,13 +1,26 @@
 <div class='container-fluid' style=" font-family: 'Roboto Condensed', sans-serif;">
-  <div class='row'>
-    <div>
-      <app-nav-menu #navMainMenu id="navMainMenu" [@slideInOut]="menuState"></app-nav-menu>
-    </div>
-    <div class='body-content'>
-      <button id="btnToggleMenu" (click)="toggleMenu()" class="hamburger" style="float: left;">
-        <span>toggle menu</span>
-      </button>
-      <router-outlet></router-outlet>
+  <div *ngIf="loggedIn; else unuathorisedBlock">
+    <div class='row'>
+      <div>
+        <app-nav-menu #navMainMenu id="navMainMenu" [@slideInOut]="menuState"></app-nav-menu>
+      </div>
+      <div class='body-content'>
+        <button id="btnToggleMenu" (click)="toggleMenu()" class="hamburger" style="float: left;">
+          <span>toggle menu</span>
+        </button>
+        <button class="btn btn-default" (click)="logoff()">
+          Logout
+        </button>
+        <router-outlet></router-outlet>
+      </div>
     </div>
   </div>
+
+  <ng-template #unuathorisedBlock>
+    <div>
+      <button class="btn btn-default" (click)="login()">
+        Login
+      </button>
+    </div>
+  </ng-template>
 </div>

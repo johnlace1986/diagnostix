@@ -11,8 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AuthModule } from '../auth/auth.module';
-import { AuthActivationGuard } from '../auth/authactivationguard';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 @NgModule({
   declarations: [
@@ -27,7 +26,7 @@ import { AuthActivationGuard } from '../auth/authactivationguard';
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
-    AuthModule.forRoot(),
+    OAuthModule.forRoot(),
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full', canActivate: [AuthActivationGuard] },
       { path: 'counter', component: CounterComponent },
