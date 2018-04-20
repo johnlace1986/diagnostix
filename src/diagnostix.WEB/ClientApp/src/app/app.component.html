@@ -1,10 +1,10 @@
 <div class='container-fluid'>
   <div class='row'>
     <div>
-      <app-nav-menu [@slideInOut]="menuState"></app-nav-menu>
+      <app-nav-menu id="navMenu" [@slideInOut]="menuState"></app-nav-menu>
     </div>
     <div class='body-content'>
-      <button (click)="toggleMenu()" style="float: right;">
+      <button id="btnToggleMenu" (click)="toggleMenu()" style="float: right;">
         Menu
       </button>
       <router-outlet></router-outlet>

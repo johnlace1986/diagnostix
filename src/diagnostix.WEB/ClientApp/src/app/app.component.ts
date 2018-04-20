@@ -18,7 +18,10 @@ import { OAuthService } from 'angular-oauth2-oidc';
       transition('in => out', animate('400ms ease-in-out')),
       transition('out => in', animate('400ms ease-in-out'))
     ])
-  ]
+  ],
+  host: {
+    '(document:click)': 'onClick($event)',
+  }
 })
 export class AppComponent {
   title = 'app';
@@ -64,5 +67,23 @@ export class AppComponent {
 
   toggleMenu() {
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
+  }
+
+  onClick(event) {
+
+    var element = event.srcElement;
+
+    do {
+      switch (element.id) {
+        case 'btnToggleMenu':
+        case 'navMenu':
+          return;
+      }
+
+      element = element.parentNode;
+    }
+    while (element != null);
+
+    this.menuState = 'out';
   }
 }

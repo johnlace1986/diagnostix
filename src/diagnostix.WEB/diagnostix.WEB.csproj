@@ -32,6 +32,8 @@
     <None Remove="ClientApp\e2e\app.po.ts" />
     <None Remove="ClientApp\src\app\app.component.ts" />
     <None Remove="ClientApp\src\app\app.module.ts" />
+    <None Remove="ClientApp\src\app\auth\auth-guard.ts" />
+    <None Remove="ClientApp\src\app\auth\auth.module.ts" />
     <None Remove="ClientApp\src\app\counter\counter.component.spec.ts" />
     <None Remove="ClientApp\src\app\counter\counter.component.ts" />
     <None Remove="ClientApp\src\app\home\home.component.ts" />
@@ -54,6 +56,8 @@
     <TypeScriptCompile Include="ClientApp\e2e\app.po.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\app.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\app.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\auth\auth-guard.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\auth\auth.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\counter\counter.component.spec.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\counter\counter.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\home\home.component.ts" />
