@@ -13,9 +13,9 @@ export class AppComponent {
   constructor(private oAuthService: OAuthService) {
 
     // URL of the SPA to redirect the user to after login
-    this.oAuthService.redirectUri = "https://localhost:44377/";
-    this.oAuthService.silentRefreshRedirectUri = "https://localhost:44377/";
-    this.oAuthService.postLogoutRedirectUri = "https://localhost:44377/";
+    this.oAuthService.redirectUri = "http://localhost:4200/";
+    this.oAuthService.silentRefreshRedirectUri = "http://localhost:4200/";
+    this.oAuthService.postLogoutRedirectUri = "http://localhost:4200/";
 
     // The SPA's id. The SPA is registerd with this id at the auth-server
     this.oAuthService.clientId = "diagnostix.WEB";
