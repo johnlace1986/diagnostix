@@ -14,10 +14,6 @@ export class HomeComponent {
     this.oAuthService.initImplicitFlow();
   }
 
-  public logoff() {
-    this.oAuthService.logOut();
-  }
-
   public get name() {
     let claims = this.oAuthService.getIdentityClaims();
     if (!claims) return null;
