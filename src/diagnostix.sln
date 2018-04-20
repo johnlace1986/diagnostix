@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "diagnostix.API", "diagnosti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "diagnostix.SSO", "diagnostix.SSO\diagnostix.SSO.csproj", "{6A98AF28-2155-4536-A579-FB58A70AA16B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "diagnostix.WEB", "diagnostix.WEB\diagnostix.WEB.csproj", "{96AC865F-244C-402A-9AAF-19B3083E7D7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6A98AF28-2155-4536-A579-FB58A70AA16B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A98AF28-2155-4536-A579-FB58A70AA16B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A98AF28-2155-4536-A579-FB58A70AA16B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96AC865F-244C-402A-9AAF-19B3083E7D7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96AC865F-244C-402A-9AAF-19B3083E7D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96AC865F-244C-402A-9AAF-19B3083E7D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96AC865F-244C-402A-9AAF-19B3083E7D7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
