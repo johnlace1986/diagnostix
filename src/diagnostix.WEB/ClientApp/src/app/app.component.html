@@ -1,9 +1,12 @@
 <div class='container-fluid'>
   <div class='row'>
-    <div class='col-sm-3'>
-      <app-nav-menu></app-nav-menu>
+    <div>
+      <app-nav-menu [@slideInOut]="menuState"></app-nav-menu>
     </div>
-    <div class='col-sm-9 body-content'>
+    <div class='body-content'>
+      <button (click)="toggleMenu()" style="float: right;">
+        Menu
+      </button>
       <router-outlet></router-outlet>
     </div>
   </div>
