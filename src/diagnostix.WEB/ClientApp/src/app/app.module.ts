@@ -13,7 +13,7 @@ import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,    
     NavMenuComponent,
     HomeComponent,
     CounterComponent

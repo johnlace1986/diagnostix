@@ -44,8 +44,6 @@ export class AppComponent {
       // the auth-server redirects the user back to the web-app
       // It dosn't send the user the the login page
       this.oAuthService.tryLogin({});
-
     });
-
   }
 }

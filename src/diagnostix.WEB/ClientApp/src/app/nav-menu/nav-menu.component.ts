@@ -19,4 +19,11 @@ export class NavMenuComponent {
   public get loggedIn() {
     return this.oAuthService.hasValidIdToken();
   }
+
+  public get header() {
+    if (this.oAuthService.hasValidAccessToken())
+      return this.oAuthService.getIdentityClaims()["name"];
+
+    return "diagnostix.WEB";
+  }
 }

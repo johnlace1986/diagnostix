@@ -14,9 +14,7 @@ export class HomeComponent {
     this.oAuthService.initImplicitFlow();
   }
 
-  public get name() {
-    let claims = this.oAuthService.getIdentityClaims();
-    if (!claims) return null;
-    return claims["name"];
+  public get loggedIn() {
+    return this.oAuthService.hasValidIdToken();
   }
 }
