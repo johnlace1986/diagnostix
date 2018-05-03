@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 import { OAuthService } from 'angular-oauth2-oidc';
@@ -9,14 +10,14 @@ import { OAuthService } from 'angular-oauth2-oidc';
   styleUrls: ['./app.component.css'],
   animations: [
     trigger('slideInOut', [
-      state('in', style({
+      state('open', style({
         transform: 'translate3d(0, 0, 0)'
       })),
-      state('out', style({
+      state('closed', style({
         transform: 'translate3d(-100%, 0, 0)'
       })),
-      transition('in => out', animate('400ms ease-in-out')),
-      transition('out => in', animate('400ms ease-in-out'))
+      transition('open => closed', animate('400ms ease-in-out')),
+      transition('closed => open', animate('400ms ease-in-out'))
     ])
   ],
   host: {
@@ -24,9 +25,10 @@ import { OAuthService } from 'angular-oauth2-oidc';
   }
 })
 export class AppComponent {
-  title = 'app';
- 
-  menuState:string = 'out';
+  @ViewChild(NavMenuComponent) navMenu:NavMenuComponent;
+
+  title = 'app'; 
+  menuState:string = 'closed';
 
   constructor(private oAuthService: OAuthService) {
 
@@ -66,24 +68,34 @@ export class AppComponent {
   }
 
   toggleMenu() {
-    this.menuState = this.menuState === 'out' ? 'in' : 'out';
+    this.menuState = this.menuState === 'closed' ? 'open' : 'closed';
+  }
+
+  closeMenu() {
+    this.menuState = 'closed';
   }
 
   onClick(event) {
 
-    var element = event.srcElement;
+    if (!this.navMenu.pinned) {
+      var element = event.srcElement;
 
-    do {
-      switch (element.id) {
-        case 'btnToggleMenu':
-        case 'navMenu':
-          return;
+      do {
+        switch (element.id) {
+          case 'btnToggleMenu':
+          case 'navMenu':
+            return;
+        }
+
+        element = element.parentNode;
       }
+      while (element != null);
 
-      element = element.parentNode;
+      this.menuState = 'closed';
     }
-    while (element != null);
+  }
 
-    this.menuState = 'out';
+  public get loggedIn() {
+    return this.oAuthService.hasValidAccessToken();
   }
 }

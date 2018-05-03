@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter, ViewChild } from '@angular/core';
 
 import { OAuthService } from 'angular-oauth2-oidc';
 
@@ -9,7 +9,21 @@ import { OAuthService } from 'angular-oauth2-oidc';
 })
 export class NavMenuComponent {
 
+  @Output() open: EventEmitter<any> = new EventEmitter();
+  @Output() OnCloseMenu: EventEmitter<any> = new EventEmitter();
+
+  pinned:Boolean = false;
+
   constructor(private oAuthService: OAuthService) {
+  }
+
+  closeMenu() {
+    this.pinned = false;
+    this.OnCloseMenu.emit(null);
+  }
+
+  togglePin() {
+    this.pinned = !this.pinned;
   }
 
   logout() {
