@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { OAuthModule } from 'angular-oauth2-oidc';
-
 import { AuthGuard } from './auth-guard';
+import { AuthComponent } from './auth.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    OAuthModule.forRoot()
+    CommonModule
   ],
-  declarations: [],
+  declarations: [
+    AuthComponent
+  ],
   providers: [
     AuthGuard
   ]
