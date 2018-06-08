@@ -1,9 +1,0 @@
-.body-content {
-  left: auto;
-  right: auto;
-  margin: 0 auto;
-  width: 1000px;
-}
-
-@media (max-width: 767px) {
-}
