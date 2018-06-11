@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
-import { MockOAuthServiceService } from './mock-oauth-service.service';
+import { OAuthService } from './oauth-service.service';
 import { AuthGuard } from './shared/auth.guard';
 import { WebModule } from './web/web.module';
 
@@ -21,7 +21,7 @@ import { WebModule } from './web/web.module';
     RouterModule.forRoot([])
   ],
   providers: [
-    MockOAuthServiceService
+    OAuthService
   ],
   bootstrap: [
     AppComponent

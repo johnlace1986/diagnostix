@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { MockOAuthServiceService } from '../mock-oauth-service.service';
+import { OAuthService } from '../oauth-service.service';
 
 @Component({
   selector: 'dw-auth',
@@ -10,7 +10,7 @@ import { MockOAuthServiceService } from '../mock-oauth-service.service';
 })
 export class AuthComponent implements OnInit {
 
-  constructor(private oAuthService: MockOAuthServiceService, private router: Router) {
+  constructor(private oAuthService: OAuthService, private router: Router) {
 
   }
 

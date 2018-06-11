@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MockOAuthServiceService } from '../../mock-oauth-service.service';
+import { OAuthService } from '../../oauth-service.service';
 
 @Component({
   selector: 'dw-home',
@@ -8,7 +8,7 @@ import { MockOAuthServiceService } from '../../mock-oauth-service.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private oAuthService: MockOAuthServiceService) {
+  constructor(private oAuthService: OAuthService) {
 
   }
 

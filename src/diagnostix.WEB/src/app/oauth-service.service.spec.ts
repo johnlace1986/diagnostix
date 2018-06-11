@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { MockOAuthServiceService } from './mock-oauth-service.service';
+import { OAuthService } from './oauth-service.service';
 
 describe('MockOAuthServiceService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [MockOAuthServiceService]
+      providers: [OAuthService]
     });
   });
 
-  it('should be created', inject([MockOAuthServiceService], (service: MockOAuthServiceService) => {
+  it('should be created', inject([OAuthService], (service: OAuthService) => {
     expect(service).toBeTruthy();
   }));
 });

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class MockOAuthServiceService {
+export class OAuthService {
 
   isLoggedIn: boolean = false;
   private readonly cookieName: string = 'DIAGNOSTIX_WEB_COOKIE';
