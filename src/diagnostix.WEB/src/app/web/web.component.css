@@ -1,10 +1,28 @@
 .header_bar {
     background: #435d61;
     color: #ffffff;
-    padding: 24px;
     font-size: 48px;
+}
+
+.app_title {
+    padding: 24px 0;
+    text-align: center;
 }
 
 .logo {
     padding-right: 12px;
+}
+
+@media only screen and (max-width: 414px) {
+    .header_bar {
+        font-size: 24px;
+    }
+
+    .app_title {
+        padding: 12px 0;
+    }
+
+    .logo {
+        height: 32px;
+    }
 }
