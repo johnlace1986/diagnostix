@@ -21,4 +21,8 @@ export class NavMenuComponent implements OnInit {
     return user.name;
   }
 
+  logout(): void {
+    this.oAuthService.logOut();
+  }
+
 }
