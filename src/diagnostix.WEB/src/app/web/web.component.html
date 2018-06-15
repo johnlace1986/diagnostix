@@ -3,7 +3,7 @@
   <div class="container">
     
     <div class="menu_button_container">
-      <button class="menu_button" (click)="toggleMenu()"></button>
+      <button id="btnToggleMenu" class="menu_button" (click)="toggleMenu()"></button>
     </div>
 
     <div class="app_title"><img class="logo" src="../../assets/logo.png" />diagnostix WEB</div>
@@ -12,7 +12,7 @@
 
 </div>
 
-<dw-nav-menu [@slideInOut]="menuState"></dw-nav-menu>
+<dw-nav-menu id="navMenu" [@slideInOut]="menuState"></dw-nav-menu>
 
 <div class="container web_body">
   <router-outlet></router-outlet>

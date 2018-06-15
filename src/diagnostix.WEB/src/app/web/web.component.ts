@@ -5,6 +5,9 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   selector: 'dw-web',
   templateUrl: './web.component.html',
   styleUrls: ['./web.component.css'],
+  host: {
+    '(document:click)': 'onClick($event)'
+  },
   animations: [
     trigger('slideInOut', [
       state('open', style({
@@ -20,7 +23,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class WebComponent implements OnInit {
  
-  menuState:string = 'closed';
+  menuState: string = 'closed';
 
   constructor() { }
 
@@ -29,5 +32,23 @@ export class WebComponent implements OnInit {
 
   toggleMenu(): void {
     this.menuState = this.menuState === 'closed' ? 'open' : 'closed';
+  }
+
+  onClick($event): void {
+ 
+    var element = $event.srcElement; 
+ 
+    do { 
+      switch (element.id) { 
+        case 'btnToggleMenu': 
+        case 'navMenu': 
+          return; 
+      } 
+ 
+      element = element.parentNode; 
+    } 
+    while (element != null); 
+
+    this.menuState = 'closed';
   }
 }
