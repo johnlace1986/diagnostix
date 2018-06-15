@@ -27,7 +27,7 @@
 }
 
 .user_name {
-  margin: 3px 0px;
+  margin-bottom: 3px;
 }
 
 .user_location {
@@ -81,6 +81,7 @@ footer {
     padding-left: 18px;
     background-image: url('../../../assets/location_small.png');
   }
+  
   .logout {
     background-image: url('../../../assets/logout_small.png');
     padding-left: 28px;
