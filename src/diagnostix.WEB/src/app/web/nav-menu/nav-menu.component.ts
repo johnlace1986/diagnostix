@@ -17,8 +17,8 @@ export class NavMenuComponent implements OnInit {
   }
 
   public get userFullName(): string {
-    var x = this.oAuthService.getIdentityClaims() as User;
-    return x.name;
+    var user = this.oAuthService.getIdentityClaims() as User;
+    return user.name;
   }
 
 }

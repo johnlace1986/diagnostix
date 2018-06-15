@@ -20,4 +20,8 @@ export class HomeComponent implements OnInit {
     this.oAuthService.logOut();
   }
 
+  public get claims(): string {
+    return JSON.stringify(this.oAuthService.getIdentityClaims());
+  }
+
 }

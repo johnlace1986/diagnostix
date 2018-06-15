@@ -25,7 +25,10 @@ export class AppComponent {
 
     this.oAuthService.tokenValidationHandler = new JwksValidationHandler();
     this.oAuthService.loadDiscoveryDocumentAndTryLogin({
-      customHashFragment: location.hash
+      customHashFragment: location.hash,
+      onTokenReceived: (var1) => {
+        var x = '';
+      }
     });
   }
 }
