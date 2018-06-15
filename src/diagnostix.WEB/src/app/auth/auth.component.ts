@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { OAuthService } from '../oauth-service.service';
+import { OAuthService } from 'angular-oauth2-oidc';
 
 @Component({
   selector: 'dw-auth',
@@ -15,9 +15,9 @@ export class AuthComponent implements OnInit {
   }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.oAuthService.initImplicitFlow();
-      this.router.navigate(['']);
-    }, 2000);
+  }
+
+  login(): void {
+    this.oAuthService.initImplicitFlow();
   }
 }
