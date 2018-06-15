@@ -11,7 +11,7 @@
 .menu_button {
     border: none;
     background-color: transparent;
-    background-image: url('../../assets/menu.png');
+    background-image: url('../../assets/images/menu.png');
     background-repeat: no-repeat;
     background-position: center;
     width: 64px;
@@ -38,7 +38,7 @@
     }
 
     .menu_button {
-        background-image: url('../../assets/menu_small.png');
+        background-image: url('../../assets/images/mobile/menu_small.png');
         width: 32px;
         height: 32px;
         margin: 15px 0px;

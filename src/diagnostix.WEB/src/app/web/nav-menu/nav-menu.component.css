@@ -14,7 +14,7 @@
 .user_icon {
   width: 48px;
   height: 48px;
-  background-image: url('../../../assets/user.png');
+  background-image: url('../../../assets/images/user.png');
   background-repeat: no-repeat;
   float: left;
   margin: 30px 15px;
@@ -37,7 +37,7 @@
   padding-top: 2px;
   padding-left: 21px;
   background-repeat: no-repeat;
-  background-image: url('../../../assets/location.png');
+  background-image: url('../../../assets/images/location.png');
 }
 
 footer {
@@ -49,7 +49,7 @@ footer {
 }
 
 .logout {
-  background-image: url('../../../assets/logout.png');
+  background-image: url('../../../assets/images/logout.png');
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
@@ -65,7 +65,7 @@ footer {
   .user_icon {
     width: 32px;
     height: 32px;
-    background-image: url('../../../assets/user_small.png');
+    background-image: url('../../../assets/images/mobile/user_small.png');
     margin: 18px 15px;
   }
 
@@ -79,11 +79,11 @@ footer {
     height: 12px;
     padding-top: 0px;
     padding-left: 18px;
-    background-image: url('../../../assets/location_small.png');
+    background-image: url('../../../assets/images/mobile/location_small.png');
   }
   
   .logout {
-    background-image: url('../../../assets/logout_small.png');
+    background-image: url('../../../assets/images/mobile/logout_small.png');
     padding-left: 28px;
   }
 }
