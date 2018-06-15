@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from '../shared/auth.guard';
 import { WebComponent } from './web.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    BrowserAnimationsModule,
     RouterModule.forChild([
       {
         path: 'web',
@@ -19,11 +22,13 @@ import { WebComponent } from './web.component';
         ]
       },
       { path: '**', redirectTo: 'web' }
-    ]),
+    ])
   ],
   declarations: [
     HomeComponent,
-    WebComponent
+    WebComponent,
+    NavMenuComponent
   ]
 })
-export class WebModule { }
+export class WebModule {
+}
