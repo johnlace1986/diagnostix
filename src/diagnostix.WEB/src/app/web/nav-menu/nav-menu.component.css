@@ -56,7 +56,7 @@ footer {
   padding-left: 36px;
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 472px) {
   :host {
     width: 300px;
     font-size: 18px;
