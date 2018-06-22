@@ -4,6 +4,7 @@ using IdentityServer4.Test;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace diagnostix.SSO
@@ -34,6 +35,19 @@ namespace diagnostix.SSO
                 },
                 new Client
                 {
+                    ClientId = "diagnostix.SSO.TestHarness",
+                    ClientName = "diagnostix.SSO.TestHarness",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    RedirectUris = { "http://localhost:5002/signin-oidc" },
+                    PostLogoutRedirectUris = { "http://localhost:5002/signout-callback-oidc" },
+                    AllowedScopes = new List<string>
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile
+                    }
+                },
+                new Client
+                {
                     ClientId = "diagnostix.WEB",
                     ClientName = "diagnostix.WEB",
                     AllowedGrantTypes = GrantTypes.Implicit,
@@ -53,8 +67,7 @@ namespace diagnostix.SSO
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile,
-                        IdentityServerConstants.StandardScopes.Email
+                        IdentityServerConstants.StandardScopes.Profile
                     },
                     RequireConsent = false
                 }
@@ -67,8 +80,8 @@ namespace diagnostix.SSO
             {
                 new TestUser
                 {
-                    SubjectId = "1",
-                    Username = "alice",
+                    SubjectId = "lacej",
+                    Username = "lacej",
                     Password = "password"
                 }
             };
@@ -79,8 +92,7 @@ namespace diagnostix.SSO
             return new List<IdentityResource>
             {
                 new IdentityResources.OpenId(),
-                new IdentityResources.Profile(),
-                new IdentityResources.Email()
+                new IdentityResources.Profile()
             };
         }
     }
