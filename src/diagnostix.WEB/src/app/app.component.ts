@@ -17,18 +17,15 @@ export class AppComponent {
   private configureWithNewConfigApi() {
     
     this.oAuthService.configure({
-      issuer: 'https://sso.local.galadirectory.co.uk/identity',
+      issuer: 'http://localhost:5000',
       redirectUri: window.location.origin + '/index.html',
       clientId: 'diagnostix.WEB',
-      scope: 'openid profile roles email',
+      scope: 'openid profile email',
     });
 
     this.oAuthService.tokenValidationHandler = new JwksValidationHandler();
     this.oAuthService.loadDiscoveryDocumentAndTryLogin({
-      customHashFragment: location.hash,
-      onTokenReceived: (var1) => {
-        var x = '';
-      }
+      customHashFragment: location.hash
     });
   }
 }
