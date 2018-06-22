@@ -1,7 +1,7 @@
-using System.Threading.Tasks;
 using IdentityServer4.Stores;
+using System.Threading.Tasks;
 
-namespace IdentityServer4.Quickstart.UI
+namespace diagnostix.SSO.Models
 {
     public static class Extensions
     {
