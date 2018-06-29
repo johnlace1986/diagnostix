@@ -20,7 +20,7 @@ export class AppComponent {
       issuer: 'http://localhost:5000',
       redirectUri: window.location.origin + '/index.html',
       clientId: 'diagnostix.WEB',
-      scope: 'openid profile',
+      scope: 'openid profile email',
     });
 
     this.oAuthService.tokenValidationHandler = new JwksValidationHandler();

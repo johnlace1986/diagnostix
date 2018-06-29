@@ -44,7 +44,8 @@ namespace diagnostix.SSO
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile
-                    }
+                    },
+                    RequireConsent = false
                 },
                 new Client
                 {
@@ -67,22 +68,10 @@ namespace diagnostix.SSO
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile
+                        IdentityServerConstants.StandardScopes.Profile,
+                        IdentityServerConstants.StandardScopes.Email
                     },
                     RequireConsent = false
-                }
-            };
-        }
-
-        public static List<TestUser> GetUsers()
-        {
-            return new List<TestUser>
-            {
-                new TestUser
-                {
-                    SubjectId = "lacej",
-                    Username = "lacej",
-                    Password = "password"
                 }
             };
         }
@@ -92,7 +81,8 @@ namespace diagnostix.SSO
             return new List<IdentityResource>
             {
                 new IdentityResources.OpenId(),
-                new IdentityResources.Profile()
+                new IdentityResources.Profile(),
+                new IdentityResources.Email()
             };
         }
     }
